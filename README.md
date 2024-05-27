@@ -62,9 +62,8 @@ Menor latência: Pode ter uma resposta ligeiramente mais rápida, pois o process
     gcc -o <executavél> <nome_do_arquivo>
 
 ## Tipos de entrada 
-* receive
+    # receive
     ./receive 0   # Para modo de espera bloqueante
      ./receive 1  # Para modo de espera ocupada
-
-* send
+    # send
      ./send <pid_do_proceso> <sinal>
