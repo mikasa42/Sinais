@@ -2,15 +2,17 @@
 #include <stdlib.h>
 #include <signal.h>
 #include <unistd.h>
-
+/* SINAL 10*/
 void handle_sigusr1(int sig) {
     printf("Received SIGUSR1\n");
+    printf("ola\n");
 }
-
+/* SIGNAL 12 */
 void handle_sigusr2(int sig) {
     printf("Received SIGUSR2\n");
+    printf("aaaaa\n");
 }
-
+/* SINAL 15*/
 void handle_sigterm(int sig) {
     printf("Received SIGTERM. Exiting...\n");
     exit(EXIT_SUCCESS);
@@ -22,7 +24,7 @@ void blocking_wait() {
 
 void busy_wait() {
     while (1) {
-        sleep(1);
+        sleep(100);
     }
 }
 
