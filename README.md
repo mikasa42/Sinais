@@ -1,12 +1,10 @@
 
-## Sistemas Distribuídos – COS470
-- 2024/1
-- Enunciando 
-
+## Sistemas Distribuídos – COS470 - 2024/1 
 # Sinais
+- Enunciando
 * Trabalho Prático 1
 -   Nesta tarefa você deve escrever dois programas distintos.
- O primeiro programa deve ser capaz de enviar um sinal a qualquer outro processo. Este
+O primeiro programa deve ser capaz de enviar um sinal a qualquer outro processo. Este
 programa recebe como parâmetros o número do processo destino e o sinal que deve ser
 enviado. Seu programa deve verificar se o processo indicado pelo parâmetro existe, e
 retornar um erro em caso caso negativo. Caso positivo, seu programa deve enviar o sinal
@@ -23,29 +21,26 @@ Descubra como implementar cada um destas formas de fazer um processo esperar!
 programa kill para enviar sinais para o seu segundo programa!
 
 
-## Explicações
-
 ## Sinais utilizados
-- SIGUSR1: 10.
-- SIGUSR2: 12.
-- SIGTERM: 15.
+ SIGUSR1: 10.
+ SIGUSR2: 12.
+ SIGTERM: 15.
 
 * Modo de Espera Bloqueante (Blocking Wait)
 
 No modo de espera bloqueante, o processo fica inativo até que ocorra um evento específico (como a recepção de um sinal). Ele cede o controle do processador, permitindo que outros processos utilizem a CPU. Uma função comum usada para implementar a espera bloqueante é pause().
 Características:
 
-    Eficiência de CPU: A CPU não é utilizada enquanto o processo está esperando. Isso é eficiente em termos de utilização de recursos.
-    Simples de implementar: Funções como pause() bloqueiam o processo até que um sinal seja recebido.
+Eficiência de CPU: A CPU não é utilizada enquanto o processo está esperando. Isso é eficiente em termos de utilização de recursos.
+Simples de implementar: Funções como pause() bloqueiam o processo até que um sinal seja recebido.
 
 * Modo de Espera Ocupada (Busy Wait)
 
 No modo de espera ocupado, o processo entra em um loop contínuo, verificando repetidamente se ocorreu um evento. Isso mantém a CPU ocupada, mesmo que não haja trabalho útil sendo realizado.
 Características:
 
-    Consome CPU: O processo consome tempo de CPU constantemente, o que pode ser ineficiente, especialmente se houver muitos processos fazendo busy waiting.
-    Menor latência: Pode ter uma resposta ligeiramente mais rápida, pois o processo está sempre em execução e pronto para reagir imediatamente.
-
+Consome CPU: O processo consome tempo de CPU constantemente, o que pode ser ineficiente, especialmente se houver muitos processos fazendo busy waiting.
+Menor latência: Pode ter uma resposta ligeiramente mais rápida, pois o processo está sempre em execução e pronto para reagir imediatamente.
 
 
 * Comparação
@@ -64,12 +59,12 @@ Características:
 
 
 ## Execução
-- gcc -o <executavél> <nome_do_arquivo>
+    gcc -o <executavél> <nome_do_arquivo>
 
 ## Tipos de entrada 
 * receive
-- ./receive 0  # Para modo de espera bloqueante
-- ./receive 1  # Para modo de espera ocupada
+    ./receive 0   # Para modo de espera bloqueante
+     ./receive 1  # Para modo de espera ocupada
 
 * send
-- ./send <PID_DO_PROCESSO> <SINAL>
+     ./send <pid_do_proceso> <sinal>
