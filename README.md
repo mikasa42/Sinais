@@ -21,11 +21,13 @@ Descubra como implementar cada um destas formas de fazer um processo esperar!
 programa kill para enviar sinais para o seu segundo programa!
 
 ---------------------------------------------------------------------------------------
-## Sinais utilizados
+### Sinais utilizados
  - SIGUSR1: 10.
  - SIGUSR2: 12.
  - SIGTERM: 15.
 
+
+### Blocking Wait x Busy Wait
 * Modo de Espera Bloqueante (Blocking Wait)
 
 No modo de espera bloqueante, o processo fica inativo até que ocorra um evento específico (como a recepção de um sinal). Ele cede o controle do processador, permitindo que outros processos utilizem a CPU. Uma função comum usada para implementar a espera bloqueante é pause().
