@@ -20,11 +20,11 @@ Descubra como implementar cada um destas formas de fazer um processo esperar!
  Teste seus programas fazendo com que um envie sinais para o outro. Use também o
 programa kill para enviar sinais para o seu segundo programa!
 
-
+---------------------------------------------------------------------------------------
 ## Sinais utilizados
- SIGUSR1: 10.
- SIGUSR2: 12.
- SIGTERM: 15.
+ - SIGUSR1: 10.
+ - SIGUSR2: 12.
+ - SIGTERM: 15.
 
 * Modo de Espera Bloqueante (Blocking Wait)
 
