@@ -4,10 +4,12 @@
 #include <unistd.h>
 
 void modo_uso(const char *nome_prog) {
-    fprintf(stderr, "Como usar: %s <modo de espera>\n", nome_prog);
-    fprintf(stderr, "Legenda");
-    printf("---------------------------------------------------");                                                          
-    printf(stderr, "| mode de espera:                                 | \n| - 0 para espera bloqueante                      | \n| - 1 para espera ocupada\n                       |");
+    fprintf(stderr, " \nComo usar: %s <modo de espera>\n", nome_prog);
+    printf("-------------------------------------- \n");  
+    printf("Legenda: \n");
+    printf("-------------------------------------- \n");                                                          
+    printf("mode de espera: \n - 0 para espera bloqueante \n - 1 para espera ocupada \n");
+    printf("-------------------------------------- \n");
 }
 
 void espera_bloqueante() {
@@ -21,15 +23,15 @@ void espera_ocupada() {
 }
 
 /* SINAL 10*/
-void handle_sigusr1(int sig) {
+void sigusr1(int sig) {
     printf("Recebeu o sinal de usuário SIGUSR1\n");
 }
 /* SIGNAL 12 */
-void handle_sigusr2(int sig) {
+void sigusr2(int sig) {
     printf("Recebeu o sinal de usuário SIGUSR2\n");
 }
 /* SINAL 15*/
-void handle_sigterm(int sig) {
+void sigterm(int sig) {
     printf("Recebeu o sinal SIGTERM. Execução terminada.\n");
     exit(EXIT_SUCCESS);
 }
@@ -43,9 +45,9 @@ int main(int argc, char *argv[]) {
 
     struct sigaction sa1, sa2, sa_term;
 
-    sa1.sa_handler = handle_sigusr1;
-    sa2.sa_handler = handle_sigusr2;
-    sa_term.sa_handler = handle_sigterm;
+    sa1.sa_handler = sigusr1;
+    sa2.sa_handler = sigusr2;
+    sa_term.sa_handler = sigterm;
 
     sigemptyset(&sa1.sa_mask);
     sigemptyset(&sa2.sa_mask);
