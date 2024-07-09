@@ -14,11 +14,8 @@ precisa definir signal handlers. Seu programa deve capturar e reagir a três sin
 (de sua escolha), ou mais, imprimindo no terminal uma mensagem diferente para cada
 sinal. Além disso, um dos sinais sendo capturados deve terminar a execução do programa,
 ou seja, sua signal handler deve terminar o processo. Repare que após estipular as signal
-handlers seu programa fica aguardando a chegada de sinais. Você deve implementar duas
+handlers seu programa fica aguardando a chegada de sinais. são implementandas duas
 formas de esperar, busy wait e blocking wait (passado como parâmetro para o programa).
-Descubra como implementar cada um destas formas de fazer um processo esperar!
- Teste seus programas fazendo com que um envie sinais para o outro. Use também o
-programa kill para enviar sinais para o seu segundo programa!
 
 ---------------------------------------------------------------------------------------
 ### Sinais utilizados
