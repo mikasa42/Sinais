@@ -3,10 +3,10 @@
 ###  Integrantes: 
 - Nome: Lidiana Souza dos Anjos
 - DRE: 117051542
-- Nome: Nycolas Silva Felix
-- DRE: 121054887
+- Nome: Nicolas Viana do Espírito Santo
+- DRE: 121042953
 - Nome: Mikaela Rikberg Alves
-- DRE:119106107
+- DRE: 119106107
 
 # Sinais
 - Enunciando
