@@ -1,5 +1,13 @@
 
 ## Sistemas Distribuídos – COS470 - 2024/1 
+###  Integrantes: 
+- Nome: Lidiana Souza dos Anjos
+- DRE: 117051542
+- Nome: Nycolas Silva Felix
+- DRE: 121054887
+- Nome: Mikaela Rikberg Alves
+- DRE:119106107
+
 # Sinais
 - Enunciando
 * Trabalho Prático 1
